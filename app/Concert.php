@@ -18,4 +18,25 @@ class Concert extends Model
     {
         return $this->date->format('F j, Y');
     }
+
+    /**
+     * Computed property
+     *
+     * @return mixed
+     */
+    public function getFormattedStartTimeAttribute()
+    {
+        return $this->date->format('g:ia');
+    }
+
+    /**
+     * Computed property
+     *
+     * @return mixed
+     */
+    public function getTicketPriceInDollarsAttribute()
+    {
+        return number_format($this->ticket_price/100,2);
+    }
+
 }
