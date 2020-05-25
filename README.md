@@ -1,12 +1,12 @@
 # what should we build first?
 
-// - Inviting promoters
-// - creating accounts
-// - Logging in as a promoter
-// - Adding concerts
-// - Editing concerts
-// - publishing concerts
-// - integrating with stripe connect to do direct payment
+ - Inviting promoters
+ - creating accounts
+ - Logging in as a promoter
+ - Adding concerts
+ - Editing concerts
+ - publishing concerts
+ - integrating with stripe connect to do direct payment
 - purchasing tickets  <=== goal
 
 # what should we test first?
