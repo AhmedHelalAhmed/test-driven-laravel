@@ -49,3 +49,9 @@ $factory->state(Concert::class,'published',function ($faker){
         'published_at' => Carbon::parse('-1 week'),
     ];
 });
+
+$factory->state(Concert::class,'unpublished',function ($faker){
+    return [
+        'published_at' => null,
+    ];
+});
