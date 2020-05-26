@@ -47,4 +47,16 @@ class ViewConcertingListingTest extends TestCase
         $this->see('Laraville, ON 17916');
         $this->see('For ticket call (555) 555-5555.');
     }
+
+    /** @test */
+    public function user_cannot_view_unpublished_concert_listings()
+    {
+        $concert = factory(Concert::class)->create([
+            'published_at' => null,
+        ]);
+
+        $this->get('/concerts/'.$concert->id);
+
+        $this->assertResponseStatus(404);
+    }
 }
